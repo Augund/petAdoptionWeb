@@ -16,7 +16,7 @@ public class homeServlet extends HttpServlet
     public void doGet(HttpServletRequest req, HttpServletResponse res)
     throws IOException, ServletException
     {
-        req.getRequestDispatcher("/home.html").forward(req, res);
+        req.getRequestDispatcher("/index.jsp").forward(req, res);
     }
 
     public void doPost(HttpServletRequest req, HttpServletResponse res)

@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>This is the website Title~</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="header-title">This is a website name~</h1>
-        <img src="images/whiteCat.png" width="100px">
-    </header>
-
     <div class="sidebar-layout">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
+         <button class="sidebar-toggle" id="sidebar-toggle" 
+         type="button" >☰</button>
             <nav>
                 <ul class="nav-list">
                     <li>
-                        <a href="home.html">Home</a>
+                        <a href="home.html">
+                        <span class="nav-label">Home</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="home.html">Our pets</a>
+                        <a href="home.html">
+                        <span class="nav-label">Home</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="home.html">Adopt</a>
+                        <a href="home.html">
+                        <span class="nav-label">Home</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="home.html">Contact</a>
+                        <a href="home.html">
+                        <span class="nav-label">Home</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
         </aside>
-
+        
+		<div class="headerAndMain">
+			<header class="header">
+	        <h1 class="header-title">This is a website name~</h1>
+	        <img src="images/whiteCat.png" width="100">
+	    </header>
         <main class="content">
             <h2>This is the content area~</h2>
         </main>
+		</div>
+		
     </div>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>
