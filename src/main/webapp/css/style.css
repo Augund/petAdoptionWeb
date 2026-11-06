@@ -1,7 +1,10 @@
+html,
 body{
-	margin:0;
+	height:100%;
 }
-
+html{
+	background-color:pink;
+}
 header{
     background-color:red;
     color:white;
@@ -13,13 +16,13 @@ header{
 
 .sidebar{
     background-color: #5677ee;
-    padding: 20px;
-    width:200px;
+    padding: 5px;
+    width:150px;
     transition:width 0.2s ease,padding 0.2s ease;
     overflow: hidden;
 }
 .sidebar.collapsed{
-    width:60px;
+    width:100px;
 }
 .sidebar-layout{
 	display:flex;
@@ -31,6 +34,27 @@ header{
     color: white;
     cursor: pointer;
 }
+.sidebar-image{
+	width: 100px;
+	transition: opacity 0.25s ease;
+	position: absolute;
+}
+
+.image-open{
+	opacity:1;
+}
+.image-close{
+	opacity:0;
+	position:relative;
+    height:100px;
+}
+.sidebar.collapsed .image-open{
+	opacity:0;
+}
+.sidebar.collapsed .image-close{
+	opacity:1;
+}
+
 
 /*the content inside Sidebar,such as home, adoption~*/
 .nav-label{
@@ -51,4 +75,8 @@ header{
 .content{
     flex:1;
     background-color:yellow;
+}
+
+.foot{
+	text-align:center;
 }

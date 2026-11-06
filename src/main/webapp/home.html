@@ -8,8 +8,17 @@
 <body>
     <div class="sidebar-layout">
         <aside class="sidebar" id="sidebar">
-         <button class="sidebar-toggle" id="sidebar-toggle" 
-         type="button" >☰</button>
+        
+        <!-- This sidebar icon is responsible -->
+         <button class="sidebar-toggle" id="sidebar-toggle"
+         aria-label="collapse"
+         type="button" >
+         	 <!-- These two image is been considered to be shown based on 
+         	 css attribute .sidebar.collapsed .
+         	 -->
+	         <img src="images/catWink.png" class="sidebar-image image-open">
+	         <img src="images/catScared.png" class="sidebar-image image-close">
+         </button>
             <nav>
                 <ul class="nav-list">
                     <li>
@@ -42,12 +51,15 @@
 	        <img src="images/whiteCat.png" width="100">
 	    </header>
         <main class="content">
+        <!-- display icon in sequence -->
+        	<img src="images/mainContentExample.png" width=100%>
+        	<img src="images/catLookAt.jpg" width=100%>
             <h2>This is the content area~</h2>
         </main>
 		</div>
 		
     </div>
-    
+    <p class="foot">© Team XYZ, 2026. All Rights Reserved.</p>
     <script src="js/script.js"></script>
 </body>
 </html>
