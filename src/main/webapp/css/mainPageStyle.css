@@ -72,9 +72,46 @@ header{
 	min-width:0;
 }
 
+/*Display the content insede content area*/
 .content{
     flex:1;
     background-color:yellow;
+}
+.carousel{
+	position: relative;
+	width:100%;
+	display:grid;
+	overflow:hidden;
+	padding:20px 0;
+	box-sizing:border-box;
+}
+.carousel-slide{
+	grid-area:1/1;/*collapse all image together*/
+	z-index:0;
+	opacity:0;
+	transition: opacity 0.5s ease;
+	
+	/*responsive configuration*/
+	max-width:100%;
+	width:auto;
+	height:auto;
+	display:block;
+	justify-self:center;
+}
+.carousel-slide.active{
+	opacity:1;
+	z-index:1;
+}
+.carousel-button{
+	position:absolute;
+	top:50%;
+	z-index:67;
+}
+.prev{
+	left:12px;
+}
+.next{
+	right:12px;
 }
 
 .foot{

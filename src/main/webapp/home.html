@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>This is the website Title~</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mainPageStyle.css">
 </head>
 <body>
     <div class="sidebar-layout">
@@ -11,7 +11,6 @@
         
         <!-- This sidebar icon is responsible -->
          <button class="sidebar-toggle" id="sidebar-toggle"
-         aria-label="collapse"
          type="button" >
          	 <!-- These two image is been considered to be shown based on 
          	 css attribute .sidebar.collapsed .
@@ -51,9 +50,23 @@
 	        <img src="images/whiteCat.png" width="100">
 	    </header>
         <main class="content">
-        <!-- display icon in sequence -->
-        	<img src="images/mainContentExample.png" width=100%>
-        	<img src="images/catLookAt.jpg" width=100%>
+        <!-- display icon in sequence ！！！！！！！！！！！！！！！！！！！！！！！-->
+        	<div class="carousel" id="carousel">
+        		<img src="images/catLookAt.jpg" class="carousel-slide active">
+        		<img src="images/mainContentExample.png" class="carousel-slide">
+        		
+      	<!-- These 2 button is use to switch to previous or next image -->
+        		<button class="carousel-button prev" type="button">
+        			<
+        		</button>
+        		<button class="carousel-button next" type="button">
+        			>
+        		</button>
+        <!-- Use JS to generate dot -->
+        		<div class="carousel-dot"></div>
+        	</div>
+        	
+        	
             <h2>This is the content area~</h2>
         </main>
 		</div>
