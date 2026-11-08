@@ -84,6 +84,7 @@ header{
 	overflow:hidden;
 	padding:20px 0;
 	box-sizing:border-box;
+	place-items:center;
 }
 .carousel-slide{
 	grid-area:1/1;/*collapse all image together*/
@@ -95,8 +96,6 @@ header{
 	max-width:100%;
 	width:auto;
 	height:auto;
-	display:block;
-	justify-self:center;
 }
 .carousel-slide.active{
 	opacity:1;
@@ -106,13 +105,53 @@ header{
 	position:absolute;
 	top:50%;
 	z-index:67;
+	border:none;
 }
 .prev{
 	left:12px;
+	height:40px;
+	width:40px;
+	background-image:url("../images/arrow-prev.png");
+	background-size:contain;
+	background-color:transparent;
 }
 .next{
 	right:12px;
+	height:40px;
+	width:40px;
+	background-image:url("../images/arrow-next.png");
+	background-size:contain;
+	background-color:transparent;
+	
 }
+/*design carousel dot appearance*/
+.carousel-dot{
+	display:flex;
+	gap:8px;
+	
+	grid-area:2/1;
+	position:static;
+	justify-content:center;
+	z-index:1;
+}
+.carousel-dot .dot{
+	
+	/*Design dot appearance*/
+	width:55px;
+	height:55px;
+	background-color:rgba(0,0,0,0);
+	background-image:url("../images/dotCat-eyeClose.png");
+	background-size:cover;
+	background-position:center;
+	transition: background 0.5s ease,
+				transform 0.3s ease,
+				border-color 0.3s ease;
+	cursor:pointer;
+}
+.carousel-dot .dot.active{
+	background-image:url("../images/dotCat-eyeOpen.png");
+}
+
 
 .foot{
 	text-align:center;
