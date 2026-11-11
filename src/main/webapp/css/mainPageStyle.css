@@ -1,69 +1,119 @@
 html,
 body{
 	height:100%;
+	padding:0 10px;
 }
 html{
-	background-color:pink;
+	background-color:#FFF5BD;
 }
+
+
+/*design style of left content*/
+.table-wrap{
+	width:100%;
+	border-radius:10px;
+	border:1px solid black;
+	background-color:#F8F8F8;
+	text-align:center;
+}
+.table-wrap table{
+	border-collapse:collapse;
+}
+.table-wrap th,
+.table-wrap td{
+	padding:5px 20px;
+}
+.table-wrap th:first-child,
+.table-wrap td:first-child{
+	border-right:1px solid black;
+}
+.num-red{
+	color:red;
+}
+.num-green{
+	color:green;
+}
+
 header{
     background-color:red;
     color:white;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 20px; 
+    gap: 50px;
+    padding:0 5px;
+    min-height:50px;
 }
-
-.sidebar{
-    background-color: #5677ee;
-    padding: 5px;
-    width:150px;
-    transition:width 0.2s ease,padding 0.2s ease;
-    overflow: hidden;
+.header-title{
+	place-items:center;
 }
-.sidebar.collapsed{
-    width:100px;
-}
-.sidebar-layout{
-	display:flex;
-	min-height:100%;
-}
-.sidebar-toggle{
+.header-toggle{
+	position:relative;
     background: transparent;
+    width:40px;
+    height:40px;
     border:none;
-    color: white;
     cursor: pointer;
 }
-.sidebar-image{
-	width: 100px;
+.header-image{
+	position:absolute;
+	top:0;
+	left:0;
+	width: 40px;
+	height:40px;
 	transition: opacity 0.25s ease;
-	position: absolute;
 }
-
 .image-open{
 	opacity:1;
 }
 .image-close{
 	opacity:0;
 	position:relative;
-    height:100px;
-}
-.sidebar.collapsed .image-open{
-	opacity:0;
-}
-.sidebar.collapsed .image-close{
-	opacity:1;
+    height:50px;
 }
 
+.user-box{
+	display:flex;
+}
+.user-img{
+	height:50px;
+}
+.sidebar-layout{
+	display:flex;
+	min-height:100%;
+}
+.sidebar{
+    background-color: #5677ee;
+    width:150px;
+    
+    transition:transform 0.3s ease,
+    			margin-left 0.25s ease;
+    overflow: hidden;
+    	
+}
+
+.sidebar-layout.collapsed .sidebar{
+	transform:translateX(-100%);
+	margin-left:-150px;
+}
+.sidebar-layout.collapsed .image-open{
+	opacity:0;
+}
+.sidebar-layout.collapsed .image-close{
+	opacity:1;
+}
+.sidebar-layout.collapsed .nav-label{ /* .collapsed only appear when click the button*/
+	opacity:0;
+	pointer-events: none;
+}
 
 /*the content inside Sidebar,such as home, adoption~*/
 .nav-label{
 	transition: opacity 0.15s ease;/*use transition animation when opacity change after 0.15s*/
+	text-decoration:none;
 }
-.sidebar.collapsed .nav-label{ /* .collapsed only appear when click the button*/
-	opacity:0;
-	 pointer-events: none;
-}
+.nav--list{
+	transition: opacity 0.15s ease;
+}	
 
 .headerAndMain{
 	flex:1;
@@ -91,24 +141,26 @@ header{
 	z-index:0;
 	opacity:0;
 	transition: opacity 0.5s ease;
-	
 	/*responsive configuration*/
 	max-width:100%;
 	width:auto;
-	height:auto;
+	height:200px;
 }
 .carousel-slide.active{
 	opacity:1;
 	z-index:1;
 }
 .carousel-button{
-	position:absolute;
-	top:50%;
+	grid-area:1/1;
+	align-self:center;
 	z-index:67;
 	border:none;
+	cursor:pointer;
+	
 }
 .prev{
-	left:12px;
+	
+	justify-self:start;
 	height:40px;
 	width:40px;
 	background-image:url("../images/arrow-prev.png");
@@ -116,7 +168,7 @@ header{
 	background-color:transparent;
 }
 .next{
-	right:12px;
+	justify-self:end;
 	height:40px;
 	width:40px;
 	background-image:url("../images/arrow-next.png");
@@ -135,7 +187,6 @@ header{
 	z-index:1;
 }
 .carousel-dot .dot{
-	
 	/*Design dot appearance*/
 	width:55px;
 	height:55px;
@@ -150,6 +201,101 @@ header{
 }
 .carousel-dot .dot.active{
 	background-image:url("../images/dotCat-eyeOpen.png");
+}
+
+/*box background(homeless & happy)*/
+.background{
+	width:212px;
+	height:auto;
+}
+.content-left{
+	height:100%;
+	width:212px;
+	padding:0 30px;
+	display:flex;
+	flex-direction:column;
+	gap:30px;
+}
+.content-right{
+	display:flex;
+	gap:20px;
+	padding:0 50px;
+}
+.mainContent-text{
+	text-align:center;
+}
+.mainContent{
+	display:flex;
+}
+.info{
+	width:390px;
+	height:auto;
+	align-items:center;
+}
+.dog-info{
+	background:transparent;
+	border:1px solid black;
+	border-radius:10px;
+	display:flex;
+	flex-direction:column;
+
+}
+.dog-gallery img{
+	width:100px;
+	height:100px;
+	padding:10px;
+	border-radius:20px;
+}
+.dog-main-img{
+	width:300px;
+	height:300px;
+	border-radius:20px;
+}
+
+.cat-info{
+	background:transparent;
+	border:1px solid black;
+	border-radius:10px;
+	display:flex;
+	flex-direction:column;
+}
+.cat-gallery img{
+	width:100px;
+	height:100px;
+	padding:10px;
+	border-radius:20px;
+}
+.cat-main-img{
+	width:300px;
+	height:300px;
+	border-radius:20px;
+}
+
+.buttonAppearance{
+	background-color:red;
+	border-radius:5px;
+	text-decoration:none;
+}
+
+.donate{
+	display:flex;
+	flex-direction:column;
+	border:1px solid black;
+	border-radius:5px;
+	align-items:stretch;
+	text-align:center;
+}
+.news{
+	display:flex;
+	flex-direction:column;
+	border:1px solid black;
+	border-radius:5px;
+	align-items:stretch;
+	text-align:center;
+}
+.news img{
+	max-width:60%;
+	align-self:center;
 }
 
 

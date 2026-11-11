@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded",function()
     {
 		//Sidebar collapsed function=====================
-        var toggle=document.getElementById("sidebar-toggle");
-        var sidebar=document.getElementById("sidebar");
+        var toggle=document.getElementById("header-toggle");
+        var layout=document.getElementById("sidebar-layout");
 
-        if(toggle&&sidebar)
+        if(toggle&&layout)
         {
                 toggle.addEventListener("click",function()
                 {
-                    sidebar.classList.toggle("collapsed");
+                    layout.classList.toggle("collapsed");
                 }
             );
         }
@@ -67,8 +67,49 @@ document.addEventListener("DOMContentLoaded",function()
 			goTo(curSlideIndex+1);
 		}
 			
+		setInterval(next,3000);
 		prevButton.addEventListener("click",prev);//click button trigger prev function upon
 		nextButton.addEventListener("click",next);
+		
+		//===============carousel dogs images=============
+		const dogMainImg = document.getElementById('dog-main-img');
+		if (dogMainImg) {
+		    const dogGalleryImgs = document.querySelectorAll('.dog-gallery img');
+		    const dogSources = Array.from(dogGalleryImgs)
+		        .map(img => img.src)
+		        .filter((src, i, arr) => src && arr.indexOf(src) === i);
+
+		    if (dogSources.length > 0) {
+		        let dIndex = 0;
+
+		        function showNextDog() {
+		            dIndex = (dIndex + 1) % dogSources.length;
+		            dogMainImg.src = dogSources[dIndex];
+		        }
+
+		        setInterval(showNextDog, 3000);
+		    }
+		}
+
+		//===============carousel cat images==============
+		const catMainImg = document.getElementById('cat-main-img');
+		if (catMainImg) {
+		    const catGalleryImgs = document.querySelectorAll('.cat-gallery img');
+		    const catSources = Array.from(catGalleryImgs)
+		        .map(img => img.src)
+		        .filter((src, i, arr) => src && arr.indexOf(src) === i);
+
+		    if (catSources.length > 0) {
+		        let cIndex = 0;
+
+		        function showNextCat() {
+		            cIndex = (cIndex + 1) % catSources.length;
+		            catMainImg.src = catSources[cIndex];
+		        }
+
+		        setInterval(showNextCat, 3000);
+		    }
+		}
 		
 		createDots();
 	}

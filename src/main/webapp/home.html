@@ -6,18 +6,15 @@
     <link rel="stylesheet" href="css/mainPageStyle.css">
 </head>
 <body>
-    <div class="sidebar-layout">
+    <div class="sidebar-layout" id="sidebar-layout">
         <aside class="sidebar" id="sidebar">
         
-        <!-- This sidebar icon is responsible -->
-         <button class="sidebar-toggle" id="sidebar-toggle"
-         type="button" >
-         	 <!-- These two image is been considered to be shown based on 
-         	 css attribute .sidebar.collapsed .
-         	 -->
-	         <img src="images/catWink.png" class="sidebar-image image-open">
-	         <img src="images/catScared.png" class="sidebar-image image-close">
-         </button>
+        <!-- display user account -->
+        <div class="user-box">
+        	<img class="user-img" src="images/defaultAvatar.png">
+        	<p>user name</p>
+        </div>
+        
             <nav>
                 <ul class="nav-list">
                     <li>
@@ -26,18 +23,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="home.html">
-                        <span class="nav-label">Home</span>
+                        <a href="ourPet.html">
+                        <span class="nav-label">Our Pet</span>
                         </a>
                     </li>
                     <li>
-                        <a href="home.html">
-                        <span class="nav-label">Home</span>
+                        <a href="adopt.html">
+                        <span class="nav-label">Adopt</span>
                         </a>
                     </li>
                     <li>
-                        <a href="home.html">
-                        <span class="nav-label">Home</span>
+                        <a href="contact.html">
+                        <span class="nav-label">contact</span>
                         </a>
                     </li>
                 </ul>
@@ -46,11 +43,22 @@
         
 		<div class="headerAndMain">
 			<header class="header">
+			<!-- This header icon is responsible -->
+         <button class="header-toggle" id="header-toggle"
+         type="button" >
+         	 <!-- These two image is been considered to be shown based on 
+         	 css attribute .sidebar.collapsed .
+         	 -->
+	         <img src="images/catWink.png" class="header-image image-open">
+	         <img src="images/catScared.png" class="header-image image-close">
+         </button>
+         
+         
 	        <h1 class="header-title">This is a website name~</h1>
 	        <img src="images/whiteCat.png" width="100">
 	    </header>
         <main class="content">
-        <!-- display icon in sequence ！！！！！！！！！！！！！！！！！！！！！！！-->
+        <!-- display icon in sequence -->
         	<div class="carousel" id="carousel">
         		<img src="images/catLookAt.jpg" class="carousel-slide active">
         		<img src="images/mainContentExample.png" class="carousel-slide">
@@ -64,13 +72,134 @@
         		<div class="carousel-dot"></div>
         	</div>
         	
+        	<h2 class="mainContent-text">This is the content area~</h2>
+        	<div class="mainContent">
         	
-            <h2>This is the content area~</h2>
+        		<div class="content-left">
+        			<div class="backgroound">
+        			<div class="table-wrap">
+					    <table>
+					        <tr>
+					            <th>Homeless</th>
+					            <th>Happy</th>
+					        </tr>
+					        <tr>
+					            <td class="num-red">34,537</td>
+					            <td class="num-green">88,801</td>
+					        </tr>
+					    </table>
+					</div>
+        			</div>
+        			
+        			<div class="donate">
+        				<div style="background-color:#CEA970;border-radius:5px">
+        					Donate & Save Lives
+        				</div>
+        				<p>Donate & help 34,520 strays find loving homes.</p>
+            			<a href="#" style="text-decoration:none">Donate Now</a>
+        				
+        			</div>
+        			
+        			<div class="news">
+	        			<div style="background-color:#9EE0C0;border-radius:5px;width:100%">
+	        					News & Updates
+	        			</div>
+	        			<p>Enter pets' info here~</p>
+        				<img src="images/dog/coco.png" class="">
+        			</div>
+        			
+        		</div>
+        	
+        	
+	        	<div class="content-right">
+		            <div class="dog-info info">
+		            	<p>There are 13,817 homeless doggies here.</p>
+		            	<!-- dog image and text info -->
+		            	<!-- The dog image should be display in order -->
+		            	<img src="images/dog/noobDog.png" class="dog-main-img" id="dog-main-img">
+		            	<p>A brief intro of this dog</p>
+		            	
+		            	<a href="#" class="buttonAppearance" id="show-dogs">
+		            	View Dogs For Adoption
+		            	</a>
+		            	<div style="height:10px"></div>
+		            	<a href="#" class="buttonAppearance" id="show-all">
+		            	View All Pets
+		            	</a>
+		            	
+		            	<table class="dog-gallery">
+		            		<tr>
+		            			<td>
+			            			<img src="images/dog/beWaterDog.png"/>
+			            			<img src="images/dog/coco.png"/>
+			            			<img src="images/dog/coco.png"/>
+		            			</td>
+	            			</tr>
+	            			<tr>
+	            				<td>
+	            					<img src="images/dog/dogStare.png">
+	            					<img src="images/dog/noobDog.png">
+	            					<img src="images/dog/coco.png"/>
+            					</td>
+           					</tr>
+           					<tr>
+	            				<td>
+	            					<img src="images/dog/dogStare.png">
+	            					<img src="images/dog/noobDog.png">
+	            					<img src="images/dog/coco.png"/>
+            					</td>
+           					</tr>
+		            	</table>
+		            </div>
+		            
+		            <div class="cat-info info">
+		            	<p>There are 19,209 neglected kitties here.</p>
+		            	<!-- cat images display in carousel -->
+		            	<img src="images/cat/catConfuse.png" class="cat-main-img" id="cat-main-img">
+		            	<p>A brief intro of this cat</p>
+		            	
+		            	<a href="#" class="buttonAppearance" id="show-cat">
+		            	View Cats For Adoption
+		            	</a>
+		            	<div style="height:10px"></div>
+		            	<a href="#" class="buttonAppearance" id="show-all">
+		            	View All Pets
+		            	</a>
+		            	
+		            	<table class="cat-gallery">
+		            		<tr>
+		            			<td>
+			            			<img src="images/cat/catConfuse.png"/>
+	            					<img src="images/cat/catSerious.png"/>
+	            					<img src="images/cat/laoWu.png"/>
+		            			</td>
+	            			</tr>
+	            			<tr>
+	            				<td>
+	            					<img src="images/cat/catConfuse.png"/>
+	            					<img src="images/cat/catSerious.png"/>
+	            					<img src="images/cat/laoWu.png"/>
+            					</td>
+           					</tr>
+           					<tr>
+	            				<td>
+	            					<img src="images/cat/catConfuse.png"/>
+	            					<img src="images/cat/catSerious.png"/>
+	            					<img src="images/cat/laoWu.png"/>
+            					</td>
+           					</tr>
+		            	</table>
+		            </div>
+				</div>
+				
+            </div>
         </main>
 		</div>
 		
     </div>
     <p class="foot">© Team XYZ, 2026. All Rights Reserved.</p>
+    <p class="foot">Contact details</p>
+    <p class="foot">Phone Number:+60-123456</p>
     <script src="js/script.js"></script>
 </body>
 </html>
