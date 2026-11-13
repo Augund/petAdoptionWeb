@@ -1,3 +1,6 @@
+img{
+	border-radius:10px;
+}
 html,
 body{
 	height:100%;
@@ -42,6 +45,7 @@ header{
     gap: 50px;
     padding:0 5px;
     min-height:50px;
+    border-radius:10px;
 }
 .header-title{
 	place-items:center;
@@ -57,7 +61,7 @@ header{
 .header-image{
 	position:absolute;
 	top:0;
-	left:0;
+	left:15px;
 	width: 40px;
 	height:40px;
 	transition: opacity 0.25s ease;
@@ -88,7 +92,8 @@ header{
     transition:transform 0.3s ease,
     			margin-left 0.25s ease;
     overflow: hidden;
-    	
+    border-radius:10px;	
+
 }
 
 .sidebar-layout.collapsed .sidebar{
@@ -264,6 +269,7 @@ header{
 	height:100px;
 	padding:10px;
 	border-radius:20px;
+	
 }
 .cat-main-img{
 	width:300px;
