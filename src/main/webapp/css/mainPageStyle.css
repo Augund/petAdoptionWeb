@@ -7,7 +7,7 @@ body{
 	margin:0;
 }
 html{
-	background-color:#FEFAE0;
+	background-color:rgba(204, 213, 174,1);
 }
 
 
@@ -38,7 +38,10 @@ html{
 }
 
 header{
-    background-color:#CCD5AE;
+   /* background-color:#CCD5AE;*/
+   background:linear-gradient(to right, 
+		rgba(204, 213, 174,1) 0%,
+    	rgba(204, 213, 174, 0) 100%);
     color:white;
     display: flex;
     align-items: center;
@@ -86,7 +89,9 @@ header{
 	min-height:100%;
 }
 .sidebar{
-    background-color:#CCD5AE;
+    background:linear-gradient(to bottom, 
+		rgba(204, 213, 174,1) 0%,
+    	rgba(204, 213, 174, 0) 100%);
     width:150px;
     
     transition:transform 0.3s ease,
@@ -122,7 +127,16 @@ header{
 }
 .nav-list{
 	transition: opacity 0.15s ease;
+	list-style:none;
+	padding:10px;
+	margin:0;
 }	
+.nav-list a{
+	display:flex;
+	align-items:center;
+	text-decoration:none;
+	gap:10px;
+}
 
 .headerAndMain{
 	flex:1;
@@ -168,7 +182,7 @@ header{
 	
 }
 .prev{
-	
+	margin-left:30px;
 	justify-self:start;
 	height:40px;
 	width:40px;
@@ -177,6 +191,7 @@ header{
 	background-color:transparent;
 }
 .next{
+	margin-right:30px;
 	justify-self:end;
 	height:40px;
 	width:40px;
@@ -296,7 +311,7 @@ header{
 	border-radius:5px;
 	align-items:stretch;
 	text-align:center;
-	background:#FBFCFD;
+	background:#F8F8F8;
 }
 .news{
 	display:flex;
@@ -305,6 +320,7 @@ header{
 	border-radius:5px;
 	align-items:stretch;
 	text-align:center;
+	background:#F8F8F8;
 }
 .news img{
 	max-width:60%;

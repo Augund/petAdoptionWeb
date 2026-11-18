@@ -30,7 +30,7 @@
 	    display:flex;
 	    align-items:center;
 	    justify-content:center;
-	    background-image: url("images/login-background2.jpg");
+	    background-image: url("images/login-background.gif");
 		background-position: center -70px;
 		background-size: 110% auto;
 		background-repeat: no-repeat;
@@ -45,9 +45,11 @@
     	justify-content:flex-start;
     	width:80%;
     	box-sizing:border-box;
-    	background:rgba(0,0,0,.5);
+    	background:rgba(0,0,0,0.3);
     	border-radius:10px;
     	gap:20px;
+    	
+    	transform:translateY(-30px);
 	}
 	.botton-background p{
 		text-align:center;
@@ -58,11 +60,14 @@
 		padding:0 15px;
 		place-items:center;
 	}
-	.left-content{
-		background:#3DDAB1;
+	.left-content{/*3DDAB1*/
+		background:linear-gradient(to right, 
+		rgba(61, 218, 177, 1) 0%,
+    	rgba(61, 218, 177, 0) 90%);
 		border-radius:10px;
-		
 	}
+
+	
 	.right-content{
 		color:white;
 		font-size:20px;
