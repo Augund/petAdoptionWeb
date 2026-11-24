@@ -1,55 +1,62 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/pet-data.jspf" %>
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adoption Interest Form - Pet Adoption Centre</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-
-    <script src="js/validation.js" defer></script>
-</head>
-<body class="adopt-page with-sidebar">
-
-<aside class="sidebar" id="sidebar">
-    <nav>
-        <ul class="nav-list">
-            <li>
-                <a href="home.html">
-                    <img class="sidebar-button" src="images/sidebar-comic/home-sidebar.png" alt="">
-                    <span class="nav-label">Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="pets.jsp">
-                    <img class="sidebar-button" src="images/sidebar-comic/ourPet-sidebar.png" alt="">
-                    <span class="nav-label">Our Pets</span>
-                </a>
-            </li>
-            <li>
-                <a href="Adopt.jsp">
-                    <img class="sidebar-button" src="images/sidebar-comic/adopt-sidebar.png" alt="">
-                    <span class="nav-label">Adopt</span>
-                </a>
-            </li>
-            <li>
-                <a href="contact.jsp">
-                    <img class="sidebar-button" src="images/sidebar-comic/contact-sidebar.png" alt="">
-                    <span class="nav-label">Contact</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</aside>
-
-<div class="page-shell">
-
-    <header>
-        <h1>Pet Adoption Centre</h1>
-    </header>
-
-    <main>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Adoption Interest Form | Pawfect</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/mainPageStyle.css">
+<link rel="stylesheet" href="css/centreTheme.css"></head>
+<body class="centre ">
+<div class="sidebar-layout" id="sidebar-layout">
+        <aside class="sidebar" id="sidebar">
+        
+        
+        
+            <nav>
+                <ul class="nav-list">
+                    <li>
+                        <a href="home.html">
+                        <img alt="" src="images/sidebar-comic/home-sidebar.png" class="sidebar-button">
+                        <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pets.jsp">
+                        <img alt="" src="images/sidebar-comic/ourPet-sidebar.png" class="sidebar-button">
+                        <span class="nav-label">Our Pets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-current="page" href="Adopt.jsp">
+                        <img alt="" src="images/sidebar-comic/adopt-sidebar.png" class="sidebar-button">
+                        <span class="nav-label">Adopt</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                        <img alt="" src="images/sidebar-comic/contact-sidebar.png" class="sidebar-button">
+                        <span class="nav-label">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+		<div class="headerAndMain">
+			<header class="header">
+			
+         <button class="header-toggle" id="header-toggle"
+         type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="true" >
+         	 
+	         <img alt="" src="images/catWink.png" class="header-image image-open">
+	         <img alt="" src="images/catScared.png" class="header-image image-close">
+         </button>
+         
+         
+	        <h1 class="header-title">Pawfect Pet Adoption Centre</h1>
+	        <img alt="" src="images/whiteCat.png" width="100">
+	        
+	    </header>
+<main class="content form-area">
         <h2>Adoption Interest Application</h2>
         
         <form id="adoptionForm" action="AdoptionServlet" method="POST" onsubmit="return validateForm()">
@@ -69,13 +76,9 @@
             <label for="petOfInterest">Pet of Interest:</label><br>
             <select id="petOfInterest" name="petOfInterest">
                 <option value="">-- Select a Pet --</option>
-                <option value="Milo (Cat)">Milo (Cat)</option>
-                <option value="Bella (Dog)">Bella (Dog)</option>
-                <option value="Simba (Cat)">Simba (Cat)</option>
-                <option value="Max (Dog)">Max (Dog)</option>
-                <option value="Luna (Cat)">Luna (Cat)</option>
-                <option value="Rocky (Dog)">Rocky (Dog)</option>
-            </select><br>
+                <% for (String[] pet : pets) { String label = pet[1] + " (" + pet[2] + ")"; %>
+<option value="<%= label %>" <%= pet[0].equals(request.getParameter("petId")) ? "selected" : "" %>><%= label %></option>
+<% } %></select><br>
             <span id="petError" class="error"></span><br><br>
 
             <label>Housing Type:</label><br>
@@ -102,12 +105,7 @@
             <input type="submit" value="Submit Application">
         </form>
     </main>
-
-    <footer>
-        <p>&copy; Team swe306, 2026. All Rights Reserved. | Contact: info@pet | Phone: 60123456789</p>
-    </footer>
-
-</div>
-
-</body>
-</html>
+<footer id="contact" class="centre-foot">&copy; Team SWE306, 2026. All rights reserved. &nbsp; <a href="tel:+60123456789">Contact: +60 12 345 6789</a></footer>
+</div></div>
+<script src="js/script.js"></script><script src="js/validation.js"></script>
+</body></html>

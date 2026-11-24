@@ -1,0 +1,78 @@
+
+/* Shared colours and spacing come from the original home page. */
+:root { --sage:#ccd5ae; --paper:#f5ebe0; --cream:#fffaf2; --ink:#35432e; --leaf:#425937; --line:#c7c9b3; }
+body.centre {display:block;height:auto;min-height:100vh;margin:0;color:var(--ink);background:var(--sage);font:16px/1.5 Georgia,"Times New Roman",serif;}
+.centre * {box-sizing:border-box;}
+.centre .sidebar-layout {min-height:100vh;}
+.centre .sidebar {flex:0 0 150px;width:150px;background:linear-gradient(#ccd5ae,#e4e9d2);border-right:1px solid var(--line);}
+.centre .nav-list {position:sticky;top:8px;padding:14px 8px;}
+.centre .nav-list a {width:auto;margin:0;padding:7px 5px;border:1px solid transparent;border-radius:9px;min-height:50px;}
+.centre .nav-list a:hover,.centre .nav-list a[aria-current] {background:#f7f5e8;border-color:var(--line);}
+.centre .header {display:flex;flex-flow:row nowrap;align-items:center;justify-content:flex-start;gap:18px;padding:8px 14px;box-shadow:none;border:0;background:linear-gradient(95deg,#ccd5ae,#e7ead5);color:var(--ink);}
+.centre .header-title {color:var(--ink);font-size:clamp(1.35rem,2.6vw,2rem);margin:0;}
+.centre .header>img {width:70px;height:auto;}
+.centre .header-toggle {width:45px;flex:none;}
+.centre .header-image {left:0;}
+.centre .headerAndMain {min-width:0;}
+.centre main.content {background:var(--paper);border-color:var(--line);margin:0;width:100%;max-width:none;padding:clamp(14px,2.4vw,32px);}
+.centre .mainContent {display:grid;grid-template-columns:minmax(155px,0.72fr) minmax(0,2fr);gap:20px;}
+.centre .content-left,.centre .content-right {width:auto;height:auto;min-width:0;padding:0;gap:16px;}
+.centre .content-right {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+.centre .info {width:100%;min-width:0;padding:12px;text-align:center;background:#faf3e9;border-color:var(--line);}
+.centre .info p {margin:8px 0;}
+.centre .info table,.centre .table-wrap table {width:100%;}
+.centre .table-wrap th,.centre .table-wrap td {padding:5px;}
+.centre .dog-main-img,.centre .cat-main-img {width:100%;max-width:300px;height:auto;aspect-ratio:1;object-fit:contain;}
+.centre .info table img {width:31%;height:auto;aspect-ratio:1;object-fit:contain;padding:2px;}
+.centre .carousel-slide {object-fit:contain;}
+.centre a,.centre .pets-filter,.centre .pets-card-title a {color:var(--leaf);}
+.centre .buttonAppearance,.centre .pets-adopt-button,.centre input[type=submit] {background:var(--leaf);color:white;border:0;border-radius:7px;padding:9px 15px;font:inherit;}
+.centre .buttonAppearance:hover,.centre .pets-adopt-button:hover,.centre input[type=submit]:hover {background:#31472a;color:white;}
+.centre .pets-title,.centre .pets-section-title,.centre .form-area h2 {color:var(--ink);}
+.centre .pets-title::after,.centre .pets-section-title::after {background:#b58e52;}
+.centre .pets-filter-bar,.centre .pets-facts,.centre form,.centre .form-area ul {background:var(--cream);border:1px solid var(--line);border-radius:10px;}
+.centre .pets-selected {border-color:var(--leaf);}
+.centre .pets-facts {padding:4px 14px;}.centre .pets-fact {margin:0;}
+.centre .pets-detail-image {width:100%;height:auto;aspect-ratio:auto;object-fit:contain;}
+.centre .pets-card-image {height:auto;aspect-ratio:4/3;object-fit:cover;}
+.centre form,.centre .form-area>h2,.centre .form-area>p,.centre .form-area>ul,.centre .form-area>a {width:min(100%,720px);margin-inline:auto;}
+.centre .form-area>h2 {margin-top:0;margin-bottom:16px;}
+.centre form {padding:clamp(16px,3vw,30px);}
+.centre .form-area>ul {padding:20px 20px 20px 40px;}
+.centre .form-area>a {display:block;}
+.centre textarea,.centre select,.centre input[type=text] {max-width:100%;font:inherit;}
+.centre .centre-foot {padding:18px;text-align:center;background:#e4e9d2;color:var(--ink);font-size:14px;}
+.centre a:focus-visible,.centre button:focus-visible {outline:3px solid #835c26;outline-offset:2px;}
+@media(max-width:960px){.centre .mainContent{grid-template-columns:1fr;}.centre .content-left{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:680px){
+ .centre .sidebar{position:fixed;inset:0 auto 0 0;z-index:90;overflow:auto;top:65px;box-shadow:4px 4px 12px #35432e20;}
+ .centre .sidebar-layout.collapsed .sidebar{margin-left:0;visibility:hidden;}
+ .centre .header{position:sticky;top:0;z-index:91;height:65px;gap:8px;}
+ .centre .header>img{width:46px;}
+ .centre .content-left,.centre .content-right,.centre .pets-grid,.centre .pets-detail-layout{grid-template-columns:1fr;}
+ .centre .content-left{gap:12px;}.centre .carousel-slide{height:150px;max-width:80%;}
+ .centre .carousel-button{width:30px;height:30px;margin:0;}
+ .centre .carousel-dot .dot{width:35px;height:35px;}
+ .centre .centre-foot{scroll-margin-top:65px;}
+}
+
+/* Shared paper, ink and portrait styling across the adoption journey. */
+:root { --paper:#f8f5ec; --cream:#fffaf0; --ink:#263e32; --leaf:#21483e; --line:#c8c6b7; }
+.centre .header { background:#f8f5ec; border-bottom:1px solid var(--line); }
+.centre .header-title { font-weight:normal; letter-spacing:-.035em; }
+.centre .sidebar { background:#dce3cb; }
+.centre .nav-list a[aria-current] { background:#fff9ea; border-color:#8b9b7e; }
+.centre .pets-title,.centre .form-area h2 { font-family:Georgia,serif; font-weight:normal; letter-spacing:-.045em; }
+.centre .pets-card { padding:clamp(12px,1.5vw,20px); background:#fffaf0; border:1px solid #d5d1c1; border-radius:12px; }
+.centre .pets-card-title { font-weight:normal; }
+.centre .pets-filter-bar { background:#dce3cb; }
+.centre .pets-detail-image { background:#ede8da; }
+.centre .centre-foot { background:#21483e; color:#fff9e9; }
+.centre .centre-foot a { color:#ffe1a8; }
+
+@media(max-width:420px) {
+  .centre .header { gap:6px; padding-inline:8px; }
+  .centre .header-title { font-size:clamp(16px,5.1vw,21px); white-space:nowrap; }
+  .centre .header-toggle { width:38px; }
+  .centre .header>img { width:32px; }
+}

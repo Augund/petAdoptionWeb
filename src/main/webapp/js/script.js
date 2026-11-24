@@ -6,9 +6,16 @@ document.addEventListener("DOMContentLoaded",function()
 
         if(toggle&&layout)
         {
+                if (window.matchMedia("(max-width: 680px)").matches) layout.classList.add("collapsed");
+                function syncNav() {
+                    const closed = layout.classList.contains("collapsed");
+                    document.getElementById("sidebar").inert = closed;
+                }
+                syncNav();
                 toggle.addEventListener("click",function()
                 {
                     layout.classList.toggle("collapsed");
+                    syncNav();
                 }
             );
         }

@@ -17,54 +17,62 @@ for (String[] pet : pets) {
 }
 %>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Our Pets | Paw Haven</title>
-    <link rel="stylesheet" href="<%= petBase %>/css/pets.css">
-    <link rel="stylesheet" href="<%= petBase %>/css/sidebar.css">
-</head>
-<body class="pets-page with-sidebar">
-
-<aside class="sidebar" id="sidebar">
-    <nav>
-        <ul class="nav-list">
-            <li>
-                <a href="<%= petBase %>/home.html">
-                    <img class="sidebar-button"
-                         src="<%= petBase %>/images/sidebar-comic/home-sidebar.png" alt="">
-                    <span class="nav-label">Home</span>
-                </a>
-            </li>
-            <li>
-                <a class="active" href="<%= petBase %>/pets.jsp">
-                    <img class="sidebar-button"
-                         src="<%= petBase %>/images/sidebar-comic/ourPet-sidebar.png" alt="">
-                    <span class="nav-label">Our Pets</span>
-                </a>
-            </li>
-            <li>
-                <a href="<%= petBase %>/Adopt.jsp">
-                    <img class="sidebar-button"
-                         src="<%= petBase %>/images/sidebar-comic/adopt-sidebar.png" alt="">
-                    <span class="nav-label">Adopt</span>
-                </a>
-            </li>
-            <li>
-                <a href="<%= petBase %>/contact.jsp">
-                    <img class="sidebar-button"
-                         src="<%= petBase %>/images/sidebar-comic/contact-sidebar.png" alt="">
-                    <span class="nav-label">Contact</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</aside>
-
-<div class="page-shell">
-
-<main class="pets-container pets-main">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Our Pets | Pawfect</title>
+<link rel="stylesheet" href="css/pets.css">
+<link rel="stylesheet" href="css/mainPageStyle.css">
+<link rel="stylesheet" href="css/centreTheme.css"></head>
+<body class="centre pets-page">
+<div class="sidebar-layout" id="sidebar-layout">
+        <aside class="sidebar" id="sidebar">
+        
+        
+        
+            <nav>
+                <ul class="nav-list">
+                    <li>
+                        <a href="home.html">
+                        <img alt="" src="images/sidebar-comic/home-sidebar.png" class="sidebar-button">
+                        <span class="nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-current="page" href="pets.jsp">
+                        <img alt="" src="images/sidebar-comic/ourPet-sidebar.png" class="sidebar-button">
+                        <span class="nav-label">Our Pets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Adopt.jsp">
+                        <img alt="" src="images/sidebar-comic/adopt-sidebar.png" class="sidebar-button">
+                        <span class="nav-label">Adopt</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                        <img alt="" src="images/sidebar-comic/contact-sidebar.png" class="sidebar-button">
+                        <span class="nav-label">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+		<div class="headerAndMain">
+			<header class="header">
+			
+         <button class="header-toggle" id="header-toggle"
+         type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="true" >
+         	 
+	         <img alt="" src="images/catWink.png" class="header-image image-open">
+	         <img alt="" src="images/catScared.png" class="header-image image-close">
+         </button>
+         
+         
+	        <h1 class="header-title">Pawfect Pet Adoption Centre</h1>
+	        <img alt="" src="images/whiteCat.png" width="100">
+	        
+	    </header>
+<main class="content pets-container pets-main">
     <h1 class="pets-title">Pets looking for a home</h1>
 
     <p class="pets-intro">
@@ -139,15 +147,7 @@ for (String[] pet : pets) {
         %>
     </div>
 </main>
-
-<footer class="pets-footer">
-    <div class="pets-container pets-footer-inner">
-        <p>&copy; Paw Haven 2026. All rights reserved.</p>
-        <p>Contact: hello@pawhaven.example</p>
-    </div>
-</footer>
-
-</div>
-
-</body>
-</html>
+<footer id="contact" class="centre-foot">&copy; Team SWE306, 2026. All rights reserved. &nbsp; <a href="tel:+60123456789">Contact: +60 12 345 6789</a></footer>
+</div></div>
+<script src="js/script.js"></script>
+</body></html>
