@@ -1,0 +1,96 @@
+<%
+String[][] pets = {
+    {
+        "buddy",
+        "Buddy",
+        "Dog",
+        "Golden Retriever",
+        "3 years",
+        "Male",
+        "Up to date",
+        "Yes",
+        "150",
+        "buddy.jpg",
+        "A friendly, gentle dog who enjoys company and outdoor walks.",
+        "Buddy enjoys spending time with people and is happy to join in everyday activities. He knows basic commands and responds well to patient training. He would suit someone who can give him regular exercise and plenty of company.",
+        "Daily walks and playtime|Regular brushing of his thick coat|A secure outdoor area or access to suitable walking spaces"
+    },
+    {
+        "luna",
+        "Luna",
+        "Cat",
+        "Domestic Shorthair",
+        "2 years",
+        "Female",
+        "Up to date",
+        "Yes",
+        "80",
+        "luna.jpg",
+        "A curious, affectionate cat who enjoys a calm home.",
+        "Luna likes watching the world from a sunny window. She may take a little time to settle into a new home, but becomes affectionate once she feels comfortable. She enjoys gentle play and having a quiet place to rest.",
+        "An indoor home with secure windows|A clean litter tray and scratching post|A quiet space while she settles in"
+    },
+    {
+        "milo",
+        "Milo",
+        "Cat",
+        "Domestic Shorthair",
+        "1 year",
+        "Male",
+        "Up to date",
+        "Yes",
+        "80",
+        "milo.jpg",
+        "A playful young cat who loves chasing toys and exploring.",
+        "Milo is an active young cat with plenty of curiosity. He enjoys interactive toys and climbing onto his favourite perch. He would suit a home where someone has time to play with him each day.",
+        "Daily interactive play|A stable cat tree and scratching post|An indoor environment with safe places to explore"
+    },
+    {
+        "daisy",
+        "Daisy",
+        "Dog",
+        "Mixed Breed",
+        "4 years",
+        "Female",
+        "Up to date",
+        "Yes",
+        "100",
+        "daisy.jpg",
+        "A loyal companion who enjoys gentle walks and attention.",
+        "Daisy is a relaxed dog who likes being near familiar people. She enjoys sniffing around on walks and resting beside her favourite person afterwards. Gentle introductions will help her feel comfortable with new people and surroundings.",
+        "Regular gentle walks|A comfortable resting area|Patient introductions to new people and pets"
+    },
+    {
+        "oliver",
+        "Oliver",
+        "Cat",
+        "Domestic Shorthair",
+        "5 years",
+        "Male",
+        "Up to date",
+        "Yes",
+        "80",
+        "oliver.jpg",
+        "A calm cat who likes quiet company and a cosy place to sleep.",
+        "Oliver prefers a peaceful routine and a comfortable spot near his family. He enjoys gentle attention but also appreciates having his own space. He would be a good match for a quieter household.",
+        "A peaceful indoor home|Regular grooming and gentle play|A consistent feeding routine and clean litter tray"
+    },
+    {
+        "coco",
+        "Coco",
+        "Dog",
+        "Beagle",
+        "2 years",
+        "Female",
+        "Up to date",
+        "Yes",
+        "120",
+        "coco.jpg",
+        "An energetic dog who loves walks, interesting smells and games.",
+        "Coco is a lively beagle who enjoys exploring with her nose. She likes food puzzles and responds well to reward-based training. She needs an adopter who can provide regular exercise and keep her occupied.",
+        "Daily exercise and scent games|Secure fencing and supervised outdoor time|Consistent reward-based training"
+    }
+};
+
+String petBase = request.getContextPath();
+%>

@@ -13,7 +13,7 @@ import jakarta.servlet.annotation.WebServlet;
 
 
 
-@WebServlet("/login")
+@WebServlet("/AdoptionServlet")
 public class homeServlet extends HttpServlet
 {	
 	
@@ -26,19 +26,30 @@ public class homeServlet extends HttpServlet
 	
 	public void doPost(HttpServletRequest request,HttpServletResponse response)
 	throws ServletException,IOException{
-		String name=request.getParameter("name");
-	    String pet=request.getParameter("pet");
-	    
-	    PrintWriter out= response.getWriter();
-	    if("admin".equals(name)&&"1111".equals(pet)) {
-	    	request.getRequestDispatcher("/confirm.jsp").forward(request, response);
-	    	
-	    }else {
-	    	out.println("<h2>Faild</h2>");
-	    	out.println("<a href='testForm.html'>back</a>");
-	    }
+	  //<--------------------------------------------------------------------->
+		request.setCharacterEncoding("UTF-8");
+
+	    String fullName = request.getParameter("fullName");
+	    String email = request.getParameter("email");
+	    String phone = request.getParameter("phone");
+	    String petOfInterest = request.getParameter("petOfInterest");
+	    String housingType = request.getParameter("housingType");
+	    String reason = request.getParameter("reason");
+	    String agreement = request.getParameter("agreement");
+
+	    request.setAttribute("fullName", fullName);
+	    request.setAttribute("email", email);
+	    request.setAttribute("phone", phone);
+	    request.setAttribute("petOfInterest", petOfInterest);
+	    request.setAttribute("housingType", housingType);
+	    request.setAttribute("reason", reason);
+	    request.setAttribute("agreement", agreement);
+
+	    request.getRequestDispatcher("Confirmation.jsp").forward(request, response);
+
 	}
-    
+	
+	    
 }
 
 

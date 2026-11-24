@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/* =========================================================
+   Shared sidebar – same look as home.html
+   Used by: pets.jsp, Adopt.jsp
+   Load this file AFTER the page stylesheet.
+   ========================================================= */
+
+/* page: sidebar on the left + content on the right */
+body.with-sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+body.with-sidebar > .page-shell {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body.with-sidebar > .page-shell > main {
+    flex: 1 0 auto;
+}
+
+/* sidebar itself */
+body.with-sidebar > .sidebar {
+    width: 150px;
+    flex: 0 0 150px;
+    background: linear-gradient(to bottom,
+        rgba(204, 213, 174, 1) 0%,
+        rgba(204, 213, 174, 0) 100%);
+    overflow: hidden;
+}
+
+/* user box */
+.sidebar .user-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px;
+}
+
+.sidebar .user-img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sidebar .user-box p {
+    margin: 0;
+    color: inherit;
+}
+
+/* navigation */
+.sidebar .nav-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.sidebar .nav-list a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;   /* 图标 + 文字从 li 左侧开始 */
+    gap: 10px;
+    width: 100%;
+    margin-left: 0;                /* 覆盖 style.css 里的 nav a{margin-left:1.5rem} */
+    text-decoration: none;
+    color: #1f2937;
+}
+
+.sidebar .sidebar-button {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.sidebar .nav-label {
+    text-decoration: none;
+}
+
+/* small screens: sidebar becomes a horizontal bar */
+@media (max-width: 800px) {
+    body.with-sidebar {
+        flex-direction: column;
+    }
+
+    body.with-sidebar > .sidebar {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .sidebar .nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .sidebar .nav-list a {
+        padding: 4px 6px;
+    }
+}

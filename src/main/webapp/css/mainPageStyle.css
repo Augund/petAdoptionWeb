@@ -97,7 +97,6 @@ header{
     transition:transform 0.3s ease,
     			margin-left 0.25s ease;
     overflow: hidden;
-
 }
 
 .sidebar-button{
@@ -124,6 +123,7 @@ header{
 .nav-label{
 	transition: opacity 0.15s ease;/*use transition animation when opacity change after 0.15s*/
 	text-decoration:none;
+	color:black;
 }
 .nav-list{
 	transition: opacity 0.15s ease;
@@ -149,6 +149,9 @@ header{
 .content{
     flex:1;
     background-color:#F5EBE0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius:10px;
+    border:1px solid #CCD4D9;
 }
 .carousel{
 	position: relative;
